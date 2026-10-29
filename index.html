@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="no">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Alghadir Senter – fellesskap, aktiviteter og arrangementer for barn, ungdom og familier.">
+  <meta name="theme-color" content="#f3eadb">
+  <title>Alghadir Senter | Fellesskap og aktiviteter</title>
+  <style>
+    :root{--cream:#f5eee2;--paper:#fffaf2;--ink:#29271f;--muted:#6e6a60;--green:#455b46;--green2:#304532;--sand:#e5d4b8;--line:#e4dacb}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--cream);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+    a{color:inherit}
+    .wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+    header{padding:22px 0}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;letter-spacing:-.03em}
+    .mark{width:44px;height:44px;border-radius:50% 50% 50% 12px;background:var(--green);color:#fffaf2;display:grid;place-items:center;font-size:18px;font-weight:800}
+    .brand small{display:block;font-size:11px;color:var(--muted);font-weight:600;letter-spacing:.13em;text-transform:uppercase}
+    nav{display:flex;gap:24px;align-items:center}
+    nav a{text-decoration:none;color:var(--muted);font-size:14px;font-weight:650}
+    nav a:hover{color:var(--green)}
+    .nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;background:var(--green);color:white;padding:12px 18px;border-radius:999px;text-decoration:none;font-weight:750;border:1px solid var(--green);transition:.2s}
+    .nav-cta:hover,.btn:hover{background:var(--green2);transform:translateY(-1px)}
+    .hero{padding:60px 0 76px}
+    .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center}
+    .eyebrow{display:inline-flex;gap:9px;align-items:center;text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:800;color:var(--green);margin-bottom:18px}
+    .eyebrow:before{content:"";width:28px;height:1px;background:var(--green)}
+    h1{font-size:clamp(44px,6.5vw,76px);line-height:1.02;letter-spacing:-.065em;margin:0 0 24px;max-width:720px}
+    h1 span{color:var(--green)}
+    .intro{font-size:18px;color:var(--muted);max-width:570px;margin:0 0 28px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+    .btn.secondary{background:transparent;color:var(--green)}
+    .btn.secondary:hover{background:#eae0d0}
+    .hero-note{font-size:12px;color:var(--muted);margin-top:16px}
+    .visual{min-height:390px;border-radius:28px;background:#e7d7bf;position:relative;overflow:hidden;display:grid;place-items:center;padding:24px}
+    .visual:before,.visual:after{content:"";position:absolute;border-radius:50%;border:1px solid rgba(69,91,70,.24)}
+    .visual:before{width:320px;height:320px;right:-72px;top:-85px}
+    .visual:after{width:230px;height:230px;left:-90px;bottom:-85px}
+    .sun{position:absolute;width:110px;height:110px;background:#c6a979;border-radius:50%;top:36px;right:42px;opacity:.8}
+    .people{position:relative;z-index:1;display:flex;align-items:end;justify-content:center;gap:10px;margin-top:38px}
+    .person{width:78px;display:flex;align-items:center;flex-direction:column}
+    .head{width:37px;height:37px;border-radius:50%;background:#b77955;margin-bottom:-2px;z-index:2}
+    .body-shape{width:75px;height:130px;border-radius:35px 35px 13px 13px;background:var(--green)}
+    .person:nth-child(2) .head{background:#d39a72}.person:nth-child(2) .body-shape{height:166px;background:#a35f43}
+    .person:nth-child(3) .head{background:#8a5a3d}.person:nth-child(3) .body-shape{height:145px;background:#d2b17d}
+    .person:nth-child(4) .head{background:#c58a62}.person:nth-child(4) .body-shape{height:115px;background:#667d67}
+    .visual-label{position:absolute;z-index:2;left:24px;bottom:22px;background:var(--paper);border:1px solid rgba(41,39,31,.08);padding:13px 16px;border-radius:16px;font-weight:750;font-size:13px;box-shadow:0 10px 30px #54452b12}
+    section{padding:68px 0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:28px}
+    .kicker{color:var(--green);text-transform:uppercase;letter-spacing:.15em;font-size:11px;font-weight:800;margin:0 0 8px}
+    h2{font-size:clamp(30px,4vw,44px);line-height:1.1;letter-spacing:-.045em;margin:0}
+    .section-head p{max-width:390px;color:var(--muted);margin:0}
+    .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+    .card{background:var(--paper);border:1px solid var(--line);border-radius:22px;padding:24px;min-height:220px}
+    .card-icon{width:46px;height:46px;display:grid;place-items:center;border-radius:14px;background:#e9e2d4;color:var(--green);font-size:22px;margin-bottom:22px}
+    .card h3{font-size:19px;letter-spacing:-.025em;margin:0 0 8px}
+    .card p{margin:0;color:var(--muted);font-size:14px}
+    .event{background:var(--green);color:#fffaf2;border-radius:28px;padding:34px;display:grid;grid-template-columns:1fr auto;gap:26px;align-items:center}
+    .event .kicker{color:#d9c6a4}
+    .event h2{max-width:630px;margin-bottom:12px}
+    .event p{color:#e3e7de;margin:0;max-width:650px}
+    .datebox{background:#f7eedf;color:var(--ink);border-radius:20px;padding:20px 24px;text-align:center;min-width:145px}
+    .datebox strong{font-size:38px;display:block;line-height:1.05;letter-spacing:-.05em}
+    .datebox span{font-size:12px;font-weight:800;text-transform:uppercase;letter-spacing:.13em}
+    .event .btn{margin-top:22px;background:#f7eedf;color:var(--green);border-color:#f7eedf}
+    .event .btn:hover{background:white}
+    .about-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:45px;align-items:start}
+    .quote{font-size:clamp(25px,3.4vw,38px);font-weight:750;line-height:1.2;letter-spacing:-.04em;margin:0}
+    .about-copy{color:var(--muted);font-size:16px;margin:0}
+    .contact{background:#e9decc;border-radius:28px;padding:34px;display:grid;grid-template-columns:1fr 1fr;gap:28px}
+    .contact p{color:var(--muted);margin:10px 0 0}
+    .contact-links{display:flex;flex-direction:column;gap:10px;align-items:flex-start;justify-content:center}
+    .contact-links a{font-weight:700;text-decoration:none;border-bottom:1px solid #b8a990;padding-bottom:3px}
+    footer{padding:26px 0 34px;color:var(--muted);font-size:12px}
+    .footer-row{display:flex;justify-content:space-between;gap:18px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:22px}
+    @media(max-width:760px){nav{display:none}.hero{padding:35px 0 52px}.hero-grid,.about-grid,.contact{grid-template-columns:1fr}.visual{min-height:320px}.section-head{display:block}.section-head p{margin-top:12px}.cards{grid-template-columns:1fr}.card{min-height:auto}.event{grid-template-columns:1fr;padding:25px}.datebox{justify-self:start;min-width:125px}.people{transform:scale(.86);transform-origin:bottom center}.hero-grid{gap:30px}section{padding:48px 0}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="#hjem" aria-label="Alghadir Senter hjem">
+        <span class="mark">غ</span><span>Alghadir Senter<small>Fellesskap · aktivitet · utvikling</small></span>
+      </a>
+      <nav aria-label="Hovedmeny">
+        <a href="#om">Om oss</a><a href="#aktiviteter">Aktiviteter</a><a href="#arrangement">Arrangement</a><a href="#kontakt">Kontakt</a>
+      </nav>
+      <a class="nav-cta" href="#arrangement">Se arrangement</a>
+    </div>
+  </header>
+
+  <main id="hjem">
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow">Velkommen til Alghadir</div>
+          <h1>Et sted å møtes.<br><span>Et sted å høre til.</span></h1>
+          <p class="intro">Alghadir Senter ønsker å skape et varmt og inkluderende fellesskap med aktiviteter, samhold og gode opplevelser for barn, ungdom og familier.</p>
+          <div class="hero-actions">
+            <a class="btn" href="#aktiviteter">Utforsk senteret <span aria-hidden="true">&nbsp;↗</span></a>
+            <a class="btn secondary" href="#kontakt">Ta kontakt</a>
+          </div>
+          <p class="hero-note">Et fellesskap der alle kan bidra og vokse sammen.</p>
+        </div>
+        <div class="visual" aria-label="Illustrasjon av en gruppe mennesker">
+          <div class="sun"></div>
+          <div class="people" aria-hidden="true">
+            <div class="person"><div class="head"></div><div class="body-shape"></div></div>
+            <div class="person"><div class="head"></div><div class="body-shape"></div></div>
+            <div class="person"><div class="head"></div><div class="body-shape"></div></div>
+            <div class="person"><div class="head"></div><div class="body-shape"></div></div>
+          </div>
+          <div class="visual-label">Sammen skaper vi gode minner ✦</div>
+        </div>
+      </div>
+    </section>
+
+    <section id="aktiviteter">
+      <div class="wrap">
+        <div class="section-head">
+          <div><p class="kicker">Hva skjer hos oss?</p><h2>Plass til fellesskap<br>og nye opplevelser.</h2></div>
+          <p>Vi vil gjøre det enkelt å møtes, bli kjent og delta i aktiviteter i et trygt og hyggelig miljø.</p>
+        </div>
+        <div class="cards">
+          <article class="card"><div class="card-icon">✳</div><h3>Aktiviteter for ungdom</h3><p>Sosiale samlinger og morsomme aktiviteter der ungdom kan møte andre og bli en del av fellesskapet.</p></article>
+          <article class="card"><div class="card-icon">♡</div><h3>Samhold og kultur</h3><p>Et sted for gode samtaler, tradisjoner, respekt og fellesskap på tvers av generasjoner.</p></article>
+          <article class="card"><div class="card-icon">☼</div><h3>Arrangementer</h3><p>Følg med på kommende samlinger, aktivitetsdager og andre arrangementer på senteret.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="arrangement">
+      <div class="wrap">
+        <div class="event">
+          <div>
+            <p class="kicker">Kommende arrangement</p>
+            <h2>Aktivitetsdag på Alghadir Senter</h2>
+            <p>Bli med på en hyggelig dag med aktiviteter, sosialt samvær, mat og snacks. Vi gleder oss til å se dere!</p>
+            <p><strong>For gutter fra 10 år og oppover.</strong></p>
+            <a class="btn" href="https://docs.google.com/forms/d/e/1FAIpQLSdCQ02TG1kzJrfE6we-FJdINUubEZEtTPTPcbSvTnkFzdnSIw/viewform" target="_blank" rel="noopener">Meld deg på ↗</a>
+          </div>
+          <div class="datebox"><strong>07</strong><span>November 2026</span><hr style="border:0;border-top:1px solid #d9c9b0;margin:14px 0"><strong style="font-size:24px">17:30</strong><span>Starttid</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="om">
+      <div class="wrap about-grid">
+        <div><p class="kicker">Om Alghadir Senter</p><p class="quote">Små møter kan skape store fellesskap.</p></div>
+        <p class="about-copy">Alghadir Senter ønsker å være et samlingspunkt der mennesker kan møtes i trygge og positive omgivelser. Gjennom aktiviteter og arrangementer vil vi styrke fellesskapet, skape gode minner og gi flere muligheten til å delta. Nettsiden vil etter hvert få mer informasjon om tilbud, åpningstider og kommende arrangementer.</p>
+      </div>
+    </section>
+
+    <section id="kontakt">
+      <div class="wrap">
+        <div class="contact">
+          <div><p class="kicker">Kontakt oss</p><h2>Har du spørsmål?</h2><p>Ta kontakt med Alghadir Senter for informasjon om aktiviteter og arrangementer.</p></div>
+          <div class="contact-links">
+            <span><strong>Alghadir Senter</strong></span>
+            <a href="https://www.google.com/maps/search/?api=1&query=Oldtidsveien+607%2C+1747+Skjeberg" target="_blank" rel="noopener">Oldtidsveien 607, 1747 Skjeberg ↗</a>
+            <a href="https://www.instagram.com/alghadir.no/" target="_blank" rel="noopener">Instagram · @alghadir.no ↗</a>
+            <a href="https://www.facebook.com/alghadir.no/" target="_blank" rel="noopener">Facebook · alghadir.no ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><div class="wrap footer-row"><span>© <span id="year">2026</span> Alghadir Senter</span><span>Laget for fellesskap.</span></div></footer>
+</body>
+</html>
